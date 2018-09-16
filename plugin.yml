@@ -1,0 +1,7 @@
+name: Introducao
+version: 1.0
+author: MateusAmaral720
+main: dev.mateusamaral720.introducao.Principal
+commands:
+  helloworld:
+    aliases: [hw, hello]
