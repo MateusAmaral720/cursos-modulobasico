@@ -1,7 +1,4 @@
-name: Introducao
+name: AulaEventos
 version: 1.0
-author: MateusAmaral720
-main: dev.mateusamaral720.introducao.Principal
-commands:
-  helloworld:
-    aliases: [hw, hello]
+authors: [Mateus, Gabriel]
+main: dev.mateusamaral720.eventos.Main
