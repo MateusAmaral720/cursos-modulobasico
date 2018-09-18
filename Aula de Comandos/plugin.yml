@@ -1,0 +1,13 @@
+name: AulaDeComandos
+version: 1.0
+author: MateusAmaral720
+main: dev.mateusamaral720.comandos.Main
+commands:
+  curar:
+    aliases: [heal]
+  fome:
+    aliases: [feed]
+  voar:
+  build:
+  gm:
+   
