@@ -12,6 +12,7 @@ import dev.mateusamaral720.comandos.comandos.Build;
 import dev.mateusamaral720.comandos.comandos.Fly;
 import dev.mateusamaral720.comandos.comandos.Gamemode;
 import dev.mateusamaral720.comandos.comandos.Heal;
+import dev.mateusamaral720.comandos.comandos.Warps;
 
 public class Main extends JavaPlugin implements Listener{
 	
@@ -33,15 +34,18 @@ public class Main extends JavaPlugin implements Listener{
 	public static Main getPlugin() {
 		return JavaPlugin.getPlugin(Main.class);
 	}
-	public MTConfig configuracao = new MTConfig(this,"config.yml");
+	
+	public MTConfig warps = new MTConfig(this, "Warps.yml");
 	public void onEnable() {
 		Bukkit.getConsoleSender().sendMessage("§bComandos carregados!");
-		configuracao.saveDefaultConfig();
 		Bukkit.getPluginManager().registerEvents(this, this);
 		getCommand("curar").setExecutor(new Heal());
 		getCommand("fome").setExecutor(new Heal());
 		getCommand("voar").setExecutor(new Fly());
 		getCommand("build").setExecutor(new Build());
+		getCommand("setwarp").setExecutor(new Warps());
+		getCommand("warp").setExecutor(new Warps());
+		getCommand("delwarp").setExecutor(new Warps());
 		getCommand("gm").setExecutor(new Gamemode());
 	}
 	

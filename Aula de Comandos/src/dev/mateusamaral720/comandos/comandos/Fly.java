@@ -5,8 +5,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import dev.mateusamaral720.comandos.Main;
-
 public class Fly implements CommandExecutor{
 
 	public boolean onCommand(CommandSender sender, Command cmd, String lb, String[] args) {
@@ -16,7 +14,6 @@ public class Fly implements CommandExecutor{
 			}
 			Player p = (Player)sender;
 			if(!p.hasPermission("permissao.voar")) {
-				p.sendMessage("" + Main.getPlugin().configuracao.getString("MensagemSemPermissao").replace("&", "§"));
 				return true;
 			}
 			if(p.getAllowFlight() == true) {

@@ -10,4 +10,8 @@ commands:
   voar:
   build:
   gm:
+  warp:
+    aliases: [warps, locais, local]
+  setwarp:
+  delwarp:
    
