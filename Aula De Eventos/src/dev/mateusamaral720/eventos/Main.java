@@ -14,6 +14,7 @@ public class Main extends JavaPlugin{
 	}
 	
 	public void onEnable() {
+		Money.register();
 		Bukkit.getConsoleSender().sendMessage("Plugin HABILITADO");
 		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
 		Bukkit.getPluginManager().registerEvents(new Bloco(), this);
