@@ -14,4 +14,7 @@ commands:
     aliases: [warps, locais, local]
   setwarp:
   delwarp:
+  youtuber:
+  setspawn:
+  spawn:
    

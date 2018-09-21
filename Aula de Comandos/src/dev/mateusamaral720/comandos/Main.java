@@ -13,6 +13,9 @@ import dev.mateusamaral720.comandos.comandos.Fly;
 import dev.mateusamaral720.comandos.comandos.Gamemode;
 import dev.mateusamaral720.comandos.comandos.Heal;
 import dev.mateusamaral720.comandos.comandos.Warps;
+import dev.mateusamaral720.comandos.comandos.YT;
+import dev.mateusamaral720.comandos.spawn.SpawnCommand;
+import dev.mateusamaral720.comandos.spawn.SpawnEvents;
 
 public class Main extends JavaPlugin implements Listener{
 	
@@ -35,10 +38,17 @@ public class Main extends JavaPlugin implements Listener{
 		return JavaPlugin.getPlugin(Main.class);
 	}
 	
+	public MTConfig spawn = new MTConfig(this, "Spawn.yml");
 	public MTConfig warps = new MTConfig(this, "Warps.yml");
 	public void onEnable() {
+		warps.saveDefaultConfig();
+		spawn.saveDefaultConfig();
+		getCommand("youtuber").setExecutor(new YT());
 		Bukkit.getConsoleSender().sendMessage("§bComandos carregados!");
 		Bukkit.getPluginManager().registerEvents(this, this);
+		Bukkit.getPluginManager().registerEvents(new SpawnEvents(), this);
+		getCommand("setspawn").setExecutor(new SpawnCommand());
+		getCommand("spawn").setExecutor(new SpawnCommand());
 		getCommand("curar").setExecutor(new Heal());
 		getCommand("fome").setExecutor(new Heal());
 		getCommand("voar").setExecutor(new Fly());
