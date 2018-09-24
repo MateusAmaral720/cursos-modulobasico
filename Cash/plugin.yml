@@ -1,0 +1,6 @@
+name: AulaCash
+version: 1.0
+authors: [Mateus, Alunos]
+main: dev.mateusamaral720.cash.Main
+commands:
+  cash:
