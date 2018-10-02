@@ -1,0 +1,6 @@
+name: AulaCaixas
+version: 1.0
+authors: [Mateus, Alunos]
+main: dev.mateusamaral720.caixas.Main
+commands:
+  caixa:
