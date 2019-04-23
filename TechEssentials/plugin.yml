@@ -1,0 +1,7 @@
+name: TechEssentials
+version: 1.0
+author: MateusAmaral720
+main: dev.mateusamaral720.techessentials.Main
+commands:
+  broadcast:
+    aliases: [aviso, alerta, alertar, avisar]
